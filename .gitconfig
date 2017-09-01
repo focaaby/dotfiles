@@ -1,6 +1,10 @@
 [user]
-	name = Jerry Wang
 	email = focaaby@gmail.com
+	name = Jerry Wang
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+[color]
+	ui = true
+[alias]
+	lg = log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
