@@ -50,7 +50,7 @@ brew install homebrew/dupes/screen
 brew cask install google-chrome firefox
 brew cask install telegram telegram-desktop slack
 brew cask install visual-studio-code sublime-text
-brew cask install iterm2 docker tunnelblick postman shiftit sketch sketch-toolbox dropbox vlc
+brew cask install iterm2 docker tunnelblick postman shiftit sketch sketch-toolbox dropbox vlc steam
 
 # Fonts
 brew cask install font-source-code-pro font-source-code-pro-for-powerline
