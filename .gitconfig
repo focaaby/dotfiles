@@ -3,3 +3,4 @@
 	email = focaaby@gmail.com
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore_global
