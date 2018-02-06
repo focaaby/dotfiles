@@ -8,7 +8,8 @@ echo "### Install curl openssh-server git aptitude"
 echo "##########"
 
 sudo apt-get install -y git curl openssh-server aptitude apt-transport-https ca-certificates software-properties-common \
-                        fcitx fcitx-chewing 
+                        fcitx fcitx-chewing \
+		        zsh	
 
 # Install Google Chrome 
 echo "##########"
@@ -65,3 +66,10 @@ unzip 1.050R-it.zip
 mkdir -p ~/.fonts
 cp source-code-pro-2.030R-ro-1.050R-it/OTF/*.otf ~/.fonts/
 fc-cache -f -v
+
+# Install oh my zsh 
+echo "##########"
+echo "### Install Oh My Zsh"
+echo "##########"
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sudo chsh -s $(which zsh)
