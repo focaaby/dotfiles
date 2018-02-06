@@ -7,6 +7,6 @@ elif [ "$(uname)" == "Linux" ]; then
 fi
 
 # links all dotfiles
-ln -s ~/.dotfiles/.zshrc ~/
+rm ~/.zshrc && ln -s ~/.dotfiles/.zshrc ~/
 ln -s ~/.dotfiles/.tmux.conf ~/
 ln -s ~/.dotfiles/.gitconfig ~/ && ln -s ~/.dotfiles/.gitignore_global ~/

@@ -1,13 +1,13 @@
 #!/bin/bash
 
-sudo apt-get update 
-sudo apt-get upgrade -y
+sudo apt update 
+sudo apt upgrade -y
 
 echo "##########"
 echo "### Install curl openssh-server git aptitude"
 echo "##########"
 
-sudo apt-get install -y git curl openssh-server aptitude apt-transport-https ca-certificates software-properties-common \
+sudo apt install -y vim git curl openssh-server aptitude apt-transport-https ca-certificates software-properties-common \
                         fcitx fcitx-chewing \
 		        zsh	
 
@@ -17,7 +17,7 @@ echo "### Install Google Chrome"
 echo "##########"
 curl -O -L https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
-sudo apt-get -f install -y
+sudo apt -f install -y
 sudo rm google-chrome-stable_current_amd64.deb
 
 # Install Docker 
@@ -26,24 +26,26 @@ echo "### Install Docker"
 echo "##########"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository -y "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-sudo apt-get install -y docker-ce
+sudo apt update 
+sudo apt install -y docker-ce
+sudo usermod -aG docker $USER
 
 # Install Telegram
 echo "##########"
 echo "### Install Telegram"
 echo "##########"
 sudo add-apt-repository -y ppa:atareao/telegram
-sudo apt-get update
-sudo apt-get install -y telegram
+sudo apt update
+sudo apt install -y telegram
 
 # Install Java
 echo "##########"
 echo "### Install Java"
 echo "##########"
 sudo add-apt-repository -y ppa:webupd8team/java
-sudo apt-get update
+sudo apt update
 echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
-sudo apt-get install -y oracle-java8-installer
+sudo apt install -y oracle-java8-installer
 
 # Install VSCode 
 echo "##########"
@@ -52,8 +54,8 @@ echo "##########"
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /tmp/microsoft.gpg
 sudo mv /tmp/microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt-get update
-sudo apt-get install -y code
+sudo apt update
+sudo apt install -y code
 
 # Install Adobe fonts: Source Code Pro
 echo "##########"
