@@ -1,11 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
 # Install homebrew
 if type brew &> /dev/null; then
-	echo "Homebrew already installed"
+    echo "Homebrew already installed"
 else
-	echo "Installing homebrew..."
-	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    echo "Installing homebrew..."
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 # Make sure we’re using the latest Homebrew.
