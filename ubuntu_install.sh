@@ -7,7 +7,8 @@ echo "##########"
 echo "### Install curl openssh-server git aptitude"
 echo "##########"
 
-sudo apt-get install -y git curl openssh-server aptitude apt-transport-https ca-certificates software-properties-common
+sudo apt-get install -y git curl openssh-server aptitude apt-transport-https ca-certificates software-properties-common \
+                        fcitx fcitx-chewing 
 
 # Install Google Chrome 
 echo "##########"
@@ -20,7 +21,7 @@ sudo rm google-chrome-stable_current_amd64.deb
 
 # Install Docker 
 echo "##########"
-echo "### Install Atom"
+echo "### Install Docker"
 echo "##########"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository -y "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
@@ -53,7 +54,7 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 sudo apt-get update
 sudo apt-get install -y code
 
-# Install Adobe fonts : Source Code Pro
+# Install Adobe fonts: Source Code Pro
 echo "##########"
 echo "### Install Fonts: Source Code Pro"
 echo "##########"
