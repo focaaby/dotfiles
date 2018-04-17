@@ -1,0 +1,16 @@
+[/]
+foreground-color='rgb(156,194,195)'
+visible-name='solarized dark'
+palette=['#002831', '#d11c24', '#6cbe6c', '#a57706', '#2176c7', '#c61c6f', '#259286', '#eae3cb', '#006488', '#f5163b', '#51ef84', '#b27e28', '#178ec8', '#e24d8e', '#00b39e', '#fcf4dc']
+bold-is-bright=true
+use-system-font=false
+cursor-colors-set=false
+highlight-colors-set=false
+use-theme-colors=false
+use-transparent-background=true
+cursor-foreground-color='rgb(243,75,0)'
+font='Source Code Pro for Powerline 14'
+use-theme-transparency=true
+bold-color-same-as-fg=true
+background-color='rgb(0,30,39)'
+background-transparency-percent=0
