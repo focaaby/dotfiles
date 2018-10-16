@@ -47,16 +47,16 @@ brew install homebrew/dupes/screen
 
 # Apps
 brew cask install google-chrome firefox
-brew cask install telegram telegram-desktop slack
+brew cask install telegram-desktop slack
 brew cask install visual-studio-code sublime-text
-brew cask install iterm2 docker tunnelblick postman shiftit sketch sketch-toolbox dropbox vlc steam
+brew cask install iterm2 docker tunnelblick postman sketch dropbox vlc spotify
 
 # Fonts
 brew cask install font-source-code-pro font-source-code-pro-for-powerline
 
 # Install tools
-brew install node yarn nmap mtr tree wget git
+brew install nmap mtr tree wget git mas tmux
 
 # Install zsh
-brew install zsh
-&& chsh -s /bin/zsh
+brew install zsh 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
