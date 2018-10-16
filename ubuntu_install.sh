@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -xe
+
 sudo apt update 
 sudo apt upgrade -y
 
@@ -7,9 +9,11 @@ echo "##########"
 echo "### Install curl openssh-server git aptitude"
 echo "##########"
 
-sudo apt install -y vim git curl openssh-server aptitude apt-transport-https ca-certificates software-properties-common \
-                        fcitx fcitx-chewing \
-		        zsh	
+sudo apt install -y vim git curl openssh-server aptitude zsh tmux \
+                    apt-transport-https ca-certificates \
+                    software-properties-common \
+                    fcitx fcitx-chewing 	
+		        
 
 # Install Google Chrome 
 echo "##########"
@@ -73,5 +77,6 @@ fc-cache -f -v
 echo "##########"
 echo "### Install Oh My Zsh"
 echo "##########"
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-sudo chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+source $HOME/.zshrc
