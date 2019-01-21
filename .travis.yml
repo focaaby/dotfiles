@@ -1,0 +1,13 @@
+language: generic
+dist: xenial
+sudo: true
+
+before_script:
+  - cd script
+
+script:
+  - shellcheck -x ubuntu_install.sh
+
+branches:
+  only:
+    - /^feature\/.*$/
