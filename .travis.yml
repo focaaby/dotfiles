@@ -12,6 +12,13 @@ matrix:
       env:
         - INSTALL_SCRIPT="macOS_install.sh"
 
+
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update && brew install shellcheck ; fi
+
+before_script:
+  - cd script
+
 script:
   - shellcheck -x "${INSTALL_SCRIPT}"
 
