@@ -9,5 +9,5 @@ script:
   - shellcheck -x ubuntu_install.sh
 
 branches:
-  only:
-    - /^feature\/.*$/
+  except:
+    - master
