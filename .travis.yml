@@ -1,12 +1,19 @@
 language: generic
-dist: xenial
+
 sudo: true
 
-before_script:
-  - cd script
+matrix:
+  include:
+    - os: linux
+      dist: xenial
+      env:
+        - INSTALL_SCRIPT="ubuntu_install.sh"
+    - os: osx
+      env:
+        - INSTALL_SCRIPT="macOS_install.sh"
 
 script:
-  - shellcheck -x ubuntu_install.sh
+  - shellcheck -x "${INSTALL_SCRIPT}"
 
 branches:
   except:
