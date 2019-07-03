@@ -21,7 +21,7 @@ brew upgrade
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 # Install GNU `sed`, overwriting the built-in `sed`.
 
-brew install --with-default-names coreutils diffutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep
+brew install coreutils diffutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
@@ -43,7 +43,6 @@ brew tap caskroom/fonts
 brew update
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 
@@ -56,7 +55,7 @@ brew cask install google-chrome firefox \
 brew cask install font-source-code-pro font-source-code-pro-for-powerline
 
 # Install tools
-brew install nmap mtr tree wget git mas tmux zsh
+brew install vim nmap mtr tree wget git mas tmux zsh
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
