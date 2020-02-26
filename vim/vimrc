@@ -44,4 +44,17 @@ syntax enable
 
 " Key mapping
 map <C-b> :NERDTreeToggle<CR>
-
+let NERDTreeShowHidden=1
+let NERDTreeMapOpenInTab='\r'
+autocmd BufWritePre * %s/\s\+$//e
+set wrap
+set linebreak
+" note trailing space at end of next line
+set showbreak=>\ \ \
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
